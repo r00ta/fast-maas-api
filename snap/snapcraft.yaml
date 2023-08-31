@@ -1,9 +1,9 @@
-name: maas-fast-api
-title: maas-fast-api
+name: fast-maas-api
+title: fast-maas-api
 version: '0.0.1'
 summary: A community tool to retrieve your machines in a fast way
 description: |
-  maas-fast-api is a community tool to access your MAAS database and extract the machines list and details
+  fast-maas-api is a community tool to access your MAAS database and extract the machines list and details
   in an incredibly fast way. 
   In particular, a webservice is exposed at port 1337 and you can use the exposed endpoints to retrieve the data you 
   need.
@@ -12,7 +12,7 @@ grade: devel
 confinement: strict
 
 apps:
-  maas-fast-api:
+  fast-maas-api:
     command: start_snap.sh
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/java-11-openjdk-amd64
@@ -23,7 +23,7 @@ apps:
       - network-bind
 
 parts:
-  maas-fast-api:
+  fast-maas-api:
     plugin: maven
     source: .
     source-type: local
