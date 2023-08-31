@@ -1,4 +1,4 @@
-package maas.r00ta.com.models;
+package com.r00ta.maas.models;
 
 import java.util.List;
 

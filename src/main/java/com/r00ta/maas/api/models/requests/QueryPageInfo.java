@@ -1,11 +1,11 @@
-package maas.r00ta.com.api.models.requests;
+package com.r00ta.maas.api.models.requests;
 
 import jakarta.validation.constraints.Max;
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;
 import jakarta.validation.constraints.Min;
 
-import static maas.r00ta.com.api.APIConstants.*;
+import static com.r00ta.maas.api.APIConstants.*;
 
 public class QueryPageInfo {
 

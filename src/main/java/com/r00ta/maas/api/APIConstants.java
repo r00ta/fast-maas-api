@@ -1,4 +1,4 @@
-package maas.r00ta.com.api;
+package com.r00ta.maas.api;
 
 public class APIConstants {
     /**

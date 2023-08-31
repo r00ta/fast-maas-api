@@ -1,4 +1,4 @@
-package maas.r00ta.com.api.models.responses.base;
+package com.r00ta.maas.api.models.responses.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

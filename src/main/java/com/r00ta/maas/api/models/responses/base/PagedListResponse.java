@@ -1,12 +1,8 @@
-package maas.r00ta.com.api.models.responses.base;
+package com.r00ta.maas.api.models.responses.base;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import maas.r00ta.com.models.ListResult;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
-
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Schema(name = "List",

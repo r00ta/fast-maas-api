@@ -1,8 +1,8 @@
-package maas.r00ta.com.api.models.responses;
+package com.r00ta.maas.api.models.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import maas.r00ta.com.api.models.responses.base.BaseResponse;
-import maas.r00ta.com.models.MachineStatus;
+import com.r00ta.maas.models.MachineStatus;
+import com.r00ta.maas.api.models.responses.base.BaseResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -34,6 +34,9 @@ public class MachineSummaryResponse extends BaseResponse {
 
     @JsonProperty("status")
     private MachineStatus status;
+
+    @JsonProperty("power_state")
+    private String powerState;
 
     public String getSystemId() {
         return systemId;
@@ -97,5 +100,13 @@ public class MachineSummaryResponse extends BaseResponse {
 
     public void setStatus(MachineStatus status) {
         this.status = status;
+    }
+
+    public String getPowerState() {
+        return powerState;
+    }
+
+    public void setPowerState(String powerState) {
+        this.powerState = powerState;
     }
 }
