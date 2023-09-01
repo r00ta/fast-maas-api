@@ -7,7 +7,7 @@ description: |
   in an incredibly fast way. 
   In particular, a webservice is exposed at port 1337 and you can use the exposed endpoints to retrieve the data you 
   need.
-base: core18
+base: core22
 grade: devel
 confinement: strict
 
@@ -24,16 +24,16 @@ apps:
 
 parts:
   fast-maas-api:
-    plugin: maven
+    plugin: dump
     source: .
-    source-type: local
-    build-packages:
-      - maven
-      - openjdk-11-jdk
+    organize:
+      bin/start_snap.sh: /
+      target/quarkus-app/: /quarkus-app/
     stage-packages:
       - openjdk-11-jre
-    override-build: |
-      ./mvnw clean package -DskipTests
-      cp bin/start_snap.sh $SNAPCRAFT_PART_INSTALL/
-      cp -R target/quarkus-app/ $SNAPCRAFT_PART_INSTALL/
-      chmod +x $SNAPCRAFT_PART_INSTALL/start_snap.sh
+    override-stage: |
+      snapcraftctl stage
+      chmod +xr start_snap.sh
+    prime:
+    - -usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts
+    - -usr/lib/jvm/java-11-openjdk-amd64/lib/security/blacklisted.certs
