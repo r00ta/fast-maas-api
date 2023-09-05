@@ -1,4 +1,4 @@
-# maas-fast-api
+# fast-maas-api
 
 For very very very large installations, you might use this tool to access your MAAS machines in an incredibly fast way. 
 
@@ -9,13 +9,13 @@ This is a **community** tool: use it at your own risk.
 Just use the snap (WIP)
 
 ```shell
-sudo snap install maas-fast-api
+sudo snap install fast-maas-api
 ```
 
 and run it according to your configs
 
 ```shell
-maas-fast-api --host 0.0.0.0 --port 1337 --dbuser maas --dbpassword maas --dbhost localhost --dbname maasdb
+fast-maas-api --host 0.0.0.0 --port 1337 --dbuser maas --dbpassword maas --dbhost localhost --dbname maasdb
 ```
 
 ## Local development
