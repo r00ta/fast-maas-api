@@ -6,7 +6,7 @@ import com.r00ta.maas.models.MachineStatus;
 import java.math.BigInteger;
 
 public class MachineSummary {
-    private BigInteger id;
+    private Long id;
 
     private String systemId;
 
@@ -26,7 +26,7 @@ public class MachineSummary {
 
     private String powerState;
 
-    public MachineSummary(BigInteger id, String systemId, String hostname, String owner, String fqdn, String architecture,
+    public MachineSummary(Long id, String systemId, String hostname, String owner, String fqdn, String architecture,
                           String osystem, String distroSeries, MachineStatus status, String powerState) {
         this.id = id;
         this.systemId = systemId;
@@ -40,7 +40,7 @@ public class MachineSummary {
         this.powerState = powerState;
     }
 
-    public BigInteger getId() {
+    public Long getId() {
         return id;
     }
 

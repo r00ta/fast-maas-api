@@ -18,7 +18,7 @@ public abstract class BaseResponse {
     @JsonProperty("id")
     @Schema(
             description = "The unique identifier of this resource")
-    protected BigInteger id;
+    protected Long id;
 
 
     @JsonProperty("href")
@@ -35,7 +35,7 @@ public abstract class BaseResponse {
         return kind;
     }
 
-    public BigInteger getId() {
+    public Long getId() {
         return id;
     }
 
@@ -43,7 +43,7 @@ public abstract class BaseResponse {
         return href;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

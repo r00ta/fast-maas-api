@@ -3,19 +3,19 @@ package com.r00ta.maas.persistence.dao;
 import com.r00ta.maas.models.ListResult;
 import com.r00ta.maas.persistence.dto.MachineDetails;
 import com.r00ta.maas.persistence.dto.MachineSummary;
+import com.r00ta.maas.persistence.entities.MaasserverNode;
 import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import jakarta.transaction.Transactional;
-import com.r00ta.maas.persistence.entities.Machine;
 
 import java.math.BigInteger;
 import java.util.List;
 
 @ApplicationScoped
 @Transactional
-public class MachinesDAO implements PanacheRepositoryBase<Machine, String> {
+public class MachinesDAO implements PanacheRepositoryBase<MaasserverNode, String> {
     public ListResult<MachineSummary> listAll(int page, int size){
         EntityManager em = getEntityManager();
         TypedQuery<Long> q = em.createNamedQuery("Machine.countAll", Long.class);
